@@ -1,0 +1,17 @@
+test_good_detail:
+  # goodid, errno, errmsg
+  - [1064006, 0, "成功"]
+  - [Null, 402, "arg1must not be null"]
+  - [2222, 502, "系统内部错误"]
+
+
+
+test_cart_add:
+  # goodid, productid, number, errno, errmsg
+  - [1064006, 76, 1, 0, "成功"]
+  - [Null, 76, 1, 401, "参数不对"]
+  - [1064006, Null, 1, 401, "参数不对"]
+  - [1064006, 76, Null, 502, "系统内部错误"]
+  - [1064006, 76, "abc", 402, "参数值不对"]
+  - [2064006, 76, 1, 710, "商品已下架"]
+
